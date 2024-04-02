@@ -41,7 +41,7 @@ class _AddlistPageState extends State<AddlistPage> {
                           ),
                         ),
                     
-                     ListView.builder(
+                    controller.isLoading == true? Center(child: CircularProgressIndicator()): ListView.builder(
                           shrinkWrap: true,
                           physics: NeverScrollableScrollPhysics(),
                           itemCount: _selectedProducts.length,
